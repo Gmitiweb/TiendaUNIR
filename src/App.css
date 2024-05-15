@@ -1,0 +1,238 @@
+/* body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+ */
+
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* section {
+  color: #fff;
+  text-shadow: 3px 3px rgba(50,50,70,0.5);
+  background-color: #000000b0;
+  height: 100vh;  
+} */
+.navBg {
+  background-color: #090114;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  /* background-color: #333; */
+  /* border: 1px solid #444; */
+  /* border-radius: 8px; */
+  padding: 20px;
+  margin: 20px;
+  color: #0c0b00;
+  text-align: center;
+}
+.card-product {
+  /* background-color: #333; */
+  /* border: 1px solid #444; */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  color: #0c0b00;
+  text-align: center;
+}
+.product-container > * {
+  flex: 1 1 20%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+  max-width: 20%; /* Esto limitará el ancho de los elementos al 20% del contenedor */
+  margin: 5px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+.login {
+  align-items: center;
+  justify-content: center;
+  background-color: #f7d0d0;
+  
+  /* flex-wrap: wrap;
+  justify-content: space-around;  */
+  padding: 20px;
+  margin: 20px;
+  color: #0c0b00;
+  /* text-align: center; */
+}
+
+.container-search {
+  padding: 20px;
+  display:block;
+  justify-content: center; /* Centra horizontalmente */  
+  /* height: 80vh; Opcional, ajusta la altura al 100% de la pantalla */
+}
+
+.item {
+	border-radius: 10px;
+}
+
+.item:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* .item img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+	transition: all 0.5s;
+} */
+
+.item figure {
+	overflow: hidden;
+}
+
+.item:hover img {
+	transform: scale(1.2);
+}
+
+
+
+
+
+nav {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+nav > h2 {
+  position: relative;
+  left: 60;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  list-style: none;
+  cursor: pointer;
+}
+
+/******** Items List ******/
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+/****** Item  box *********/
+.item-box {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  width: 110px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.item-quantity {
+  color: #fff;
+  background-color: #f0ad4e;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  max-width: 30px;
+  position: relative;
+  left: 40px;
+}
+
+.item-price {
+  color: gray;
+}
+
+.item-add-button {
+  background-color: #5cb85c;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.item-minus-button {
+  background-color: #d9534f;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.item-plus-button {
+  background-color: #337ab7;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/****** Shopping Cart ********/
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.cart-count {
+  background-color: blue;
+  border-radius: 20px;
+  padding: 8px;
+}
