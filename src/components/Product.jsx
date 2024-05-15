@@ -13,13 +13,13 @@ export const Product = ({ id,name, price, image }) => {
         if (isItemsFound) {
           return currItems.map((item) => {
             if (item.id === id) {
-              return { ...item, quantity: item.quantity + 1 };
+              return { ...item, quantity: item.quantity + 1,name };
             } else {
               return item;
             }
           });
         } else {
-          return [...currItems, { id, quantity: 1, price }];
+          return [...currItems, { id, quantity: 1, price,name }];
         }
       });
     };

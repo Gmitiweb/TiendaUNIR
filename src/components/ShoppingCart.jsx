@@ -12,13 +12,60 @@ export const ShoppingCart = () => {
     (acc, curr) => acc + curr.quantity * curr.price,
     0
   );
-
+  
+  const removeItem = (id) => {
+    setCart((currItems) => {
+      if (currItems.find((item) => item.id === id)?.quantity === 1) {
+        return currItems.filter((item) => item.id !== id);
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  };
   return (
-    <div className="cart-container">
-      <div>
-        <div>Items in cart: {quantity}</div>
-        <div>Total: ${totalPrice}</div>
-        <button onClick={() => console.log(cart)}>Checkout</button>
+    
+    <div className="container">
+        <div className="table-responsive">
+            <table className="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Codigo</th>
+                  <th scope="col">Descripcion</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                    {cart.map((product,index)=>(
+                    <tr>
+                    <td>{product.id}</td>
+                    <td>{product.name}</td>
+                    <td>{product.quantity}</td>
+                    <td>{product.price}</td>
+                    <td>{product.price*product.quantity}</td>
+                    <td><button className="btn btn-danger"  onClick={() => removeItem(product.id)}>X</button></td>
+                  </tr>   
+                  ))}
+                <tr>
+                  <td></td>
+                  <td>Items in cart:</td>
+                  <th>{quantity}</th>
+                  <td>Total:</td>
+                  <th>${totalPrice}</th>
+              
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div className="mx-auto">
+        <button className="btn btn-success" onClick={() => console.log(cart)}>Checkout</button>
       </div>
     </div>
   );

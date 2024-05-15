@@ -18,7 +18,9 @@ const SelectProduct = () => {
                 src={`${fetchResponse.image}`}
                 alt=""
                 // height={100}
-                width="30%"
+               width="20%"
+                height="300"
+                // width="100"
               />
             <h5>{fetchResponse.title}</h5>
             <p>Descripcion: {fetchResponse.description}</p>
