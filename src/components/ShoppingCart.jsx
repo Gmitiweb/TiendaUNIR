@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
 
+import { CartIcon,ClearCartIcon } from '../components/icon'
 export const ShoppingCart = () => {
   const [cart, setCart] = useContext(CartContext);
 
@@ -32,7 +33,7 @@ export const ShoppingCart = () => {
     
     <div className="container">
         <div className="table-responsive">
-        <h1>Carrito de compras</h1>
+        <h1>Carrito de compras <CartIcon/></h1>
             <table className="table">
               <thead class="thead-dark">
                 <tr>
@@ -51,7 +52,7 @@ export const ShoppingCart = () => {
                     <td>{product.quantity}</td>
                     <td>{product.price}</td>
                     <td>{product.price*product.quantity}</td>
-                    <td><button className="btn btn-danger"  onClick={() => removeItem(product.id)}>X</button></td>
+                    <td><button className="btn btn-danger"  onClick={() => removeItem(product.id)}><ClearCartIcon/></button></td>
                   </tr>   
                   ))}
                 <tr>

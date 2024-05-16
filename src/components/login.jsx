@@ -4,8 +4,9 @@ import Form from 'react-bootstrap/Form';
 import {useNavigate} from "react-router";
 import { Nav } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import Footer from "../layouts/footer"
 const Login = () => {
-    const navigate = useNavigate();
+   
     return(
         <div className='login col-4 mx-auto'>
             <h1>Login</h1>
@@ -38,6 +39,7 @@ const Login = () => {
                 </Form.Group>
             </Form>
             </div>
+            <Footer/>
         </div>
     )
 }

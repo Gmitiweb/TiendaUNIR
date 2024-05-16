@@ -9,6 +9,7 @@ import NavBarHeader from '../layouts/navbar';
 import SelectProduct from '../components/selectProduct';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import  {ShoppingCart}  from '../components/ShoppingCart';
+import Pedidos from '../components/Pedidos';
 
 const Storerouter = () => {
   return (
@@ -24,6 +25,7 @@ const Storerouter = () => {
         <Route path='login' element={ <Login /> } />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path='/product/:id' element={ <SelectProduct /> } />
+        <Route path='/pedidos' element={ <Pedidos /> } />
         <Route path='*' element={ <Navigate replace to="/"/> }/>
       </Route>
   </Routes> 
