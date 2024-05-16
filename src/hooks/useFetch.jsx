@@ -9,7 +9,11 @@ export const useFetch = (url) => {
         
         const fetchRequest = async () => {
             console.log("Realizando peticion...");
-            let res = await fetch(url);
+            let res = await fetch(url,{
+                'mode': 'cors',
+	            'headers': {
+            	'Access-Control-Allow-Origin': '*',}
+        });
             let data = await res.json();
             console.log('la data es',data);
             setFetchResponse(data);
