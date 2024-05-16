@@ -53,7 +53,7 @@ export const Product = ({ id,name, price, image }) => {
             <div className="mx-auto" onClick={() => navigate("/product/"+id)}>
               <img src={`${image}`} alt="" height="100" width="100"/>
               <h6>{name}</h6>
-              <p>Precio: {price}</p>
+              <p>Precio: $ {price}</p>
             </div>
             {quantityPerItem === 0 ? (
                 <button className="item-add-button" onClick={() => addToCart()}>

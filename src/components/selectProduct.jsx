@@ -44,7 +44,7 @@ const SelectProduct = () => {
                 alt="" width="20%" height="300"/>
             <h5>{fetchResponse.title}</h5>
             <p>Descripcion: {fetchResponse.description}</p>
-            <p>Precio: {fetchResponse.price}</p>
+            <p>Precio: $ {fetchResponse.price}</p>
             {quantityPerItem === 0 ? (
                 <button className="item-add-button" onClick={() => addToCart()}>
                <AddToCartIcon/>Agrega al carrito
