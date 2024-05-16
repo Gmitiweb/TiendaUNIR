@@ -14,21 +14,20 @@ import Pedidos from '../components/Pedidos';
 const Storerouter = () => {
   return (
     <BrowserRouter>
-    
-    <Routes>
-      <Route path='/' element={ <NavBarHeader /> }>
-        <Route index element={ <Home /> } />
-        <Route path='hombre' element={ <Hombre /> } />
-        <Route path='mujer' element={ <Mujer /> } />
-        <Route path='electronica' element={ <Electronica /> } />
-        <Route path='register' element={ <Register /> } />
-        <Route path='login' element={ <Login /> } />
-        <Route path="/cart" element={<ShoppingCart />} />
-        <Route path='/product/:id' element={ <SelectProduct /> } />
-        <Route path='/pedidos' element={ <Pedidos /> } />
-        <Route path='*' element={ <Navigate replace to="/"/> }/>
-      </Route>
-  </Routes> 
+      <Routes>
+        <Route path='/' element={ <NavBarHeader /> }>
+          <Route index element={ <Home /> } />
+          <Route path='hombre' element={ <Hombre /> } />
+          <Route path='mujer' element={ <Mujer /> } />
+          <Route path='electronica' element={ <Electronica /> } />
+          <Route path='register' element={ <Register /> } />
+          <Route path='login' element={ <Login /> } />
+          <Route path="/cart" element={<ShoppingCart />} />
+          <Route path='/product/:id' element={ <SelectProduct /> } />
+          <Route path='/pedidos' element={ <Pedidos /> } />
+          <Route path='*' element={ <Navigate replace to="/"/> }/>
+        </Route>
+    </Routes> 
   </BrowserRouter>
   )
 }

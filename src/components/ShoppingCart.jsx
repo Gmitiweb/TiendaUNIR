@@ -35,7 +35,7 @@ export const ShoppingCart = () => {
         <div className="table-responsive">
         <h1>Carrito de compras <CartIcon/></h1>
             <table className="table">
-              <thead class="thead-dark">
+              <thead className="thead-dark">
                 <tr>
                   <th scope="col">Codigo</th>
                   <th scope="col">Descripcion</th>
