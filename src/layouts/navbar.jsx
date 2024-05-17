@@ -15,9 +15,10 @@ const NavBarTienda = () => {
       listStyle: "none",
       textDecoration: "none",
     };
-
+  //he usado esta navbar que vi en youtube la descargue y la modifique a mi gusto
     return(
-       <>    
+       <>
+           
        <Navbar className="navBg" variant="dark" expand="lg">
           <Container>
               <Navbar.Brand as={Link} to="/" >Tienda-UNIR</Navbar.Brand>

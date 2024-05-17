@@ -30,7 +30,7 @@ export const ShoppingCart = () => {
     });
   };
   return (
-    
+    //esta tabla es un ejemplo en la documentacion de bootstrap
     <div className="container">
         <div className="table-responsive">
         <h1>Carrito de compras <CartIcon/></h1>

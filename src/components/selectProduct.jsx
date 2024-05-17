@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from '../hooks/useFetch';
 
 import { CartContext } from "../context/ShoppingCartContext";
-import { AddToCartIcon,RemoveFromCartIcon } from '../components/icon'
+import { AddToCartIcon } from '../components/icon'
 const SelectProduct = () => {
     // const location = useLocation();
     const { id } = useParams();
