@@ -27,7 +27,8 @@ const Home = () => {
         <div>
             <h2 className="center-text">Nuevos Productos</h2>
             <div className='container-search'>
-            <input value={search||''} onChange={searcher} type="text" placeholder='Search' className='form-control'/></div>
+                <input value={search||''} onChange={searcher} type="text" placeholder='Search' className='form-control'/>
+            </div>
             <div className="product-container">
                 {results.map((product,index)=>(
                     <div className='item' key={product.id}>
